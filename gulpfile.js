@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-  return gulp.src('app/styles/main.scss')
+  return gulp.src('app/styles/main.sass')
     .pipe($.plumber())
     .pipe($.rubySass({
       style: 'expanded',
@@ -90,7 +90,7 @@ gulp.task('serve', ['connect', 'watch'], function () {
 gulp.task('wiredep', function () {
   var wiredep = require('wiredep').stream;
 
-  gulp.src('app/styles/*.scss')
+  gulp.src('app/styles/*.sass')
     .pipe(wiredep())
     .pipe(gulp.dest('app/styles'));
 
@@ -110,7 +110,7 @@ gulp.task('watch', ['connect'], function () {
     'app/images/**/*'
   ]).on('change', $.livereload.changed);
 
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/styles/**/*.sass', ['styles']);
   gulp.watch('bower.json', ['wiredep']);
 });
 
