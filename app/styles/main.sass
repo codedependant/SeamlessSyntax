@@ -1,7 +1,55 @@
+
+
 // bower:sass
+@import "../../bower_components/inuit-defaults/settings.defaults"
+
+$inuit-base-text-color: #4A4A4A
+
+@import "../../bower_components/inuit-functions/tools.functions"
+@import "../../bower_components/inuit-mixins/tools.mixins"
+
+@import "../../bower_components/inuit-normalize/generic.normalize"
+@import "../../bower_components/inuit-reset/generic.reset"
+@import "../../bower_components/inuit-box-sizing/generic.box-sizing"
+
+@import "../../bower_components/inuit-page/base.page"
+@import "../../bower_components/inuit-headings/base.headings"
 // endbower
 
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr
+  margin-bottom: 1.5rem
+
+h1, .#{$inuit-namespace}alpha, h2, .#{$inuit-namespace}beta, h3, .#{$inuit-namespace}gamma
+  font-weight: 800
+  line-height: 1
+
 body
+  font-family: 'Gotham HTF', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+.header
+  padding: .5rem
+
+  // doodling
+  padding:     .5rem 1.5rem
+  color:       white
+  font-size:   14px
+  line-height: 1
+  position:    absolute
+  width:       100%
+
+.page-wrap
+  max-width: 1200px
+  margin: auto
+
+.section
+  padding: 3rem 1.5rem
+
+.section--landing
   background: #4A90E2
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
   color: white
+
+.hero__slogan
+  margin: 0

@@ -3,6 +3,9 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "inuit-starter-kit": "~0.2.8",
+    "inuit-headings": "~0.2.2",
+    "inuit-reset": "~0.1.1"
   }
 }
