@@ -16,6 +16,9 @@ $inuit-base-text-color: #4A4A4A
 @import "../../bower_components/inuit-headings/base.headings"
 // endbower
 
+
+$brand-color: #4A90E2
+
 h1,h2,h3,h4,h5,h6,hgroup,
 ul,ol,dd,
 p,figure,
@@ -32,11 +35,14 @@ body
 
 .header
   padding: .5rem
-
+  background-color: $brand-color
+  color: white
   // doodling
   padding:     1rem 0
-  font-size:   12px
+  font-size:   .75rem
   line-height: 1
+  position: absolute
+  width: 100%
 
 .page-wrap
   max-width: 1200px
@@ -44,11 +50,12 @@ body
   padding: 0 1.5rem
 
 .section
-  padding: 3rem 0
+  padding: 3rem 0rem
 
 .section--landing
-  background: #4A90E2
+  background: $brand-color
   color: white
+  padding: 3.75rem 0rem 3rem 0
 
 .hero__slogan
   margin: 0
