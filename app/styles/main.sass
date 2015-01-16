@@ -26,9 +26,10 @@ pre,table,fieldset,hr
   margin-bottom: 1.5rem
 
 h1, .#{$inuit-namespace}alpha, h2, .#{$inuit-namespace}beta, h3, .#{$inuit-namespace}gamma
+  font-family: 'Gotham HTF', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  letter-spacing: -.05rem
   font-weight: 800
   line-height: 1
-  font-family: 'Gotham HTF', 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 body
   font-family: 'Brandon Text', 'Helvetica Neue', Helvetica, Arial, sans-serif
@@ -59,3 +60,37 @@ body
 
 .hero__slogan
   margin: 0
+
+.enviroment__list
+  position: relative
+
+  h4
+    margin-bottom: .5rem
+    line-height: 1
+
+  p
+    font-size: 14px
+
+  // &:after
+  //   content: ''
+  //   width: 2px
+  //   background: rgba(0, 0, 0, 0.03)
+  //   position: absolute
+  //   left: -15.6px
+  //   top: 16px
+  //   bottom: 177px
+
+  li
+    position: relative
+    list-style: none
+    &:before
+      content: ""
+      width: 8px
+      background: currentcolor
+      position: absolute
+      left: -16px
+      top: 0px
+      height: 8px
+      border-radius: 100%
+      box-shadow: 5px 8px, -5px 8px
+      color: rgb(144, 144, 144)
