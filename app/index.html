@@ -26,18 +26,40 @@
     <![endif]-->
     <header class="header">
       <div class="page-wrap">
-        <div>Seamless Syntax</div>
+        <a href="http://seamlesssyntax.com" class="brand-name">Seamless Syntax</a>
       </div>
     </header>
     <section class="section section--landing">
       <div class="page-wrap">
-        <h1 class="hero__slogan">We're building applications for the web</h1>
+        <h1 class="hero__slogan">
+          <div>We're building</div>
+          <div class="js-hero hero__slogan__label"> applications</div>
+          <div> for the web</div>
+        </h1>
+        <img class="hero__image" src="/images/hero.jpg"/>
+      </div>
+    </section>
+    <section class="section section--clients">
+      <div class="page-wrap">
+        <h1>With Happy Clients,</h1>
+        <p class="section__description">
+          The success of your product is the most important factor to us. Not only is it our aim to build quility applications, but also lasting relationships.
+        </p>
+        <div class="client-quote">
+          <blockquote class="beta-text">
+            “Thank you Seamless Syntax for always sticking to deadlines and your incredible patience. I would recommend their services in a heartbeat.”
+          </blockquote>
+          <label class="beta-text">Ange Surridge - Brandfluent</label>
+        </div>
+        <p class="client-logos">
+          <img src="/images/client_logos.png"/>
+        </p>
       </div>
     </section>
     <section class="section section--enviroment">
       <div class="page-wrap">
-        <h1>Every Enviroment.</h1>
-        <p>
+        <h1>In Every Enviroment</h1>
+        <p class="section__description">
           Regardless whether your company is a fledging startup or seasoned enterprise, we’re commited to understanding the problems you and your users are facing and coming up with solutions that are both elegant and cost effective. 
         </p>
 
@@ -63,22 +85,11 @@
         </ul>
       </div>
     </section>
-    <section class="section">
-      <div class="page-wrap">
-        <h1>Happy Clients.</h1>
-        <p>
-          The success of your product is the most important factor to us. Not only is it our aim to build quility applications, but also lasting relationships.
-        </p>
-        <blockquote class="beta-text">
-          “Thank you Seamless Syntax for always sticking to deadlines and your incredible patience. I would recommend their services in a heartbeat.”
-        </blockquote>
-        <label class="beta-text">Ange Surridge - Brandfluent</label>
-      </div>
-    </section>
+
     <section class="section section--contact">
       <div class="page-wrap">
         <h1>Say Hi.</h1>
-        <p>
+        <p class="section__description">
           You’re always welcome to contact us, regardless of how big or small your project is.
         </p>
       </div>
@@ -98,9 +109,27 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+    <script src="http://gabinaureche.com/TheaterJS/build/theater.min.js">
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+    <script>
+      var theater = new TheaterJS({erase: false});
+      theater.describe("Hero", { speed: .8, accuracy: .9, invincibility: 8 }, ".js-hero");
+      console.log(theater);
+
+      theater
+      .write(1200)
+      .write({ name: "erase"})
+      .write("Hero:user interfaces", 600)
+      .write(1200)
+      .write({ name: "erase"})
+      .write("Hero:experiences", 600)
+      .write(1200)
+      .write({ name: "erase"})
+      .write("Hero:products", 600);
+    </script>
+
 </body>
 </html>

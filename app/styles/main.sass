@@ -31,6 +31,9 @@ h1, .#{$inuit-namespace}alpha, h2, .#{$inuit-namespace}beta, h3, .#{$inuit-names
   font-weight: 800
   line-height: 1
 
+html, body
+  height: 100%
+
 body
   font-family: 'Brandon Text', 'Helvetica Neue', Helvetica, Arial, sans-serif
 
@@ -47,6 +50,10 @@ blockquote + label
   font-weight: bold
   display:     block
 
+img
+  -webkit-image-rendering: crisp-edges
+  width: 100%
+
 .header
   padding: .5rem
   background-color: $brand-color
@@ -60,23 +67,55 @@ blockquote + label
 
 .page-wrap
   max-width: 1200px
-  margin: auto
-  padding: 0 1.5rem
+  margin:    auto
+  padding:   0 1.5rem
+  position:  relative
 
 .section
-  padding: 3rem 0rem
+  padding: 5rem 0rem
+
+.section__description
+  margin-bottom: 4rem
+  max-width: 29rem
+
+.section--fullscreen
+  min-height: 100%
 
 .section--landing
-  background: $brand-color
+  background-color: $brand-color
   color: white
-  padding: 3.75rem 0rem 3rem 0
+  padding: 5.75rem 0rem 5rem 0
 
-.section--contact
+.section--contact, .section--clients
   background-color: #F8F8F8
-  // border: 1px solid #E5E5E5
+
+.brand-name
+  color: #1F78DA
+  font-weight: 900
+  text-decoration: none
+
+  &:hover
+    color: white
+    text-decoration: underline
+
 
 .hero__slogan
-  margin: 0
+  margin:     0
+  top:        0
+  right: 63%
+  position:   absolute
+  text-align: right
+  max-width:  27rem
+  font-size:  3.5rem
+
+  max-width: 30vw
+  font-size: 4vw
+
+.hero__slogan__label
+  min-height: 4vw
+
+.hero__image
+  width: 100%
 
 .enviroment__list
   position: relative
@@ -89,5 +128,6 @@ blockquote + label
   font-size: 14px
   line-height: 1.42857142857143
 
-
+.client-logos
+  margin: 4rem auto
 
